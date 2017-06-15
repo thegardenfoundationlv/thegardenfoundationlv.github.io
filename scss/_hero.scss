@@ -1,0 +1,241 @@
+/*----------------------------------------*/
+/*  3.  Hero Area
+/*----------------------------------------*/
+/*-- Nivo Caption --*/
+.nivo-caption {
+    background-color: transparent;
+    height: 100%;
+    padding: 0;
+    
+    height: 100%;
+    & .container {
+        display: table;
+        height: 100%;
+        & .row {
+            display: table-cell;
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+}
+/*-- Hero Style For BG Image & Video --*/
+.hero-image-bg {
+    background-image: url(img/hero/1.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+.hero-video-bg {
+    background-image: url(img/hero/video.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+.hero-caption {
+    padding: 250px 0;
+    @media #{$laptop-device}{
+        padding: 200px 0;
+    }
+    @media #{$desktop-device}{
+        padding: 150px 0;
+    }
+    @media #{$tablet-device}{
+        padding: 100px 0;
+    }
+    @media #{$large-mobile}{
+        padding: 70px 0;
+    }
+    @media #{$small-mobile}{
+        padding: 40px 0;
+    }
+}
+/*-- Hero Content --*/
+.hero-content {
+    & h1 {
+        font-size: 60px;
+        line-height: 64px;
+        font-weight: 800;
+        color: $color-white;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        @media #{$desktop-device}{
+            font-size: 50px;
+            line-height: 56px;
+        }
+        @media #{$tablet-device}{
+            font-size: 36px;
+            line-height: 40px;
+        }
+        @media #{$large-mobile}{
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 5px;
+        }
+    }
+    & p {
+        color: $color-white;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        max-width: 810px;
+        padding: 0;
+        margin-bottom: 30px;
+        @media #{$tablet-device}{
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 20px;
+        }
+        @media #{$large-mobile}{
+            font-size: 14px;
+            height: 50px;
+            line-height: 24px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        @media #{$small-mobile}{
+            display: none;
+        }
+    }
+    & a {
+        height: 50px;
+        border: 2px solid $color-white;
+        border-radius: 5px;
+        display: inline-block;
+        padding: 11px 42px 10px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: $color-white;
+        font-weight: 600;
+        @media #{$desktop-device}{
+            height: 44px;
+            padding: 8px 30px 7px;
+        }
+        @media #{$tablet-device}{
+            height: 36px;
+            padding: 4px 20px 3px;
+            font-size: 13px;
+        }
+        @media #{$large-mobile}{
+            height: 36px;
+            padding: 4px 20px 3px;
+            font-size: 12px;
+        }
+        @media #{$small-mobile}{
+            height: 30px;
+            padding: 1px 15px 2px;
+            border-width: 1px;
+            font-size: 10px;
+        }
+        &:hover {
+            background-color: $color-white;
+            color: $theme-color;
+        }
+    }
+}
+/*-- Nivo Diraction Nav --*/
+.nivo-directionNav {
+    & a {
+        background-color: rgba($color-black, 0.15);
+        top: 50%;
+        margin-top: -31px;
+        height: 62px;
+        width: 62px;
+        text-align: center;
+        border-radius: 50%;
+        color: $color-white;
+        overflow: hidden;
+        opacity: 0;
+        @media #{$tablet-device}{
+            height: 40px;
+            width: 40px;
+            margin-top: -20px;
+        }
+        @media #{$large-mobile}{
+            display: none;
+        }
+        &:hover {
+            & span {
+              opacity: 0;  
+            }
+            & i {
+                opacity: 1;
+            }
+        }
+        &.nivo-prevNav {
+            left: 40px;
+            margin-left: 50px;
+            @media #{$laptop-device}{
+                left: 15px;
+            }
+            @media #{$desktop-device}{
+                left: 0px;
+            }
+            @media #{$tablet-device}{
+                left: 0px;
+            }
+            &:hover {
+                & i {
+                    left: -11px;
+                }
+            }
+        }
+        &.nivo-nextNav {
+            right: 40px;
+            margin-right: 50px;
+            @media #{$laptop-device}{
+                right: 15px;
+            }
+            @media #{$desktop-device}{
+                right: 0px;
+            }
+            @media #{$tablet-device}{
+                right: 0px;
+            }
+            &:hover {
+                & i {
+                    left: 11px;
+                }
+            }
+        }
+        & span {
+            display: block;
+            line-height: 62px;
+            font-size: 24px;
+            font-weight: 500;
+            text-transform: uppercase;
+            @media #{$tablet-device}{
+                line-height: 40px;
+                font-size: 18px;
+            }
+        }
+        & i {
+            display: block;
+            line-height: 62px;
+            font-size: 30px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            opacity: 0;
+            @media #{$tablet-device}{
+                line-height: 40px;
+                font-size: 24px;
+            }
+        }
+    }
+}
+.nivoSlider:hover {
+    & .nivo-directionNav {
+        & a {
+            opacity: 1;
+            &.nivo-prevNav {
+                margin-left: 0;
+            }
+            &.nivo-nextNav {
+                margin-right: 0;
+            }
+        }
+    }
+}
